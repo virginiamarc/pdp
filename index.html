@@ -32,9 +32,15 @@
     </header>
 
   <section class="hero">
+    <div class="hero-slides">
+      <div class="slide" style="background-image: url('media-potts-website/3_dogs_at_potts.png');"></div>
+      <div class="slide" style="background-image: url('media-potts-website/owner_1dog.png');"></div>
+      <div class="slide" style="background-image: url('media-potts-website/owner_2dogs.png');"></div>
+      <div class="slide" style="background-image: url('media-potts-website/german_shepard.png')"></div>
+    </div>
+    
     <div class="hero-text">
-      <h1>Welcome to Potts Off-Leash Dog Sanctuary</h1>
-      <p>A safe, joyful space for dogs and their humans to connect with nature.</p>
+      <h1>Where Dogs Run Free and Humans Reconnect With Nature</h1>
     </div>
   </section>
 
@@ -55,6 +61,20 @@
     <p>Your donations help us thrive. Suggested gift: $1 per dog per visit.</p>
     <a href="donate.html" class="btn">Make a Donation</a>
   </section>
+  
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  slides[0].classList.add('active'); // show first slide
+  setInterval(showNextSlide, 5000);  // change every 5 seconds
+</script>
 
   <footer>
     <p>© 2026 Potts Dog Sanctuary | Ruskin, FL</p>
