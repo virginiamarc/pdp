@@ -278,6 +278,14 @@ section {
   margin-top: 0;
 }
 
+.dr-potts-photo-left {
+  float: left;
+  width: 220px;          /* adjust size as needed */
+  margin: 0 1.5rem 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
 /* CONTACT FORM STYLING */
 .contact-form {
   display: flex;
@@ -380,5 +388,17 @@ footer a {
 
   .hero-text {
     padding: 1rem;
+  }
+
+  .slide-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .dr-potts-photo-left {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    max-width: 300px;
   }
 }
