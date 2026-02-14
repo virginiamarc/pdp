@@ -20,10 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(showNextSlide, 5000);
 
-  document.querySelector('.arrow-right').addEventListener('click', showNextSlide);
-  document.querySelector('.arrow-left').addEventListener('click', showPrevSlide);
+  const rightArrow = document.querySelector('.arrow-right');
+  const leftArrow = document.querySelector('.arrow-left');
 
-  slides[0].classList.add('active');
+  if (rightArrow) rightArrow.addEventListener('click', showNextSlide);
+  if (leftArrow) leftArrow.addEventListener('click', showPrevSlide);
+
+  if (slides.length > 0) slides[0].classList.add('active');
 
   // HAMBURGER MENU SCRIPT
   const hamburger = document.querySelector('.hamburger');
