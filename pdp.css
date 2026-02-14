@@ -376,6 +376,78 @@ footer a {
   color: var(--bluegray);
 }
 
+/* FOOTER LAYOUT */
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: left;
+  padding-bottom: 1.5rem;
+}
+
+.footer-column h4 {
+  color: var(--sand);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.footer-column p {
+  margin: 0.3rem 0 1rem 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+footer a {
+  color: var(--bluegray);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--sand);
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-social a {
+  font-size: 1.4rem;
+  background: rgba(255,255,255,0.1);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: rgba(255,255,255,0.25);
+  color: var(--sand);
+}
+
+/* BOTTOM COPYRIGHT LINE */
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 800px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
 /* ================================
    RESPONSIVE DESIGN
    ================================ */
