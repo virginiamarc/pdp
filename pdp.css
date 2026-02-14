@@ -43,8 +43,73 @@ a:hover {
 /* HEADER BACKGROUND (green) */
 header {
   background-color: var(--sage);
-  padding: 0.5rem 0 0;
+  padding: 0.2rem 0 0;
   border-bottom: none;
+}
+
+/* NAVIGATION BAR (sand) */
+.main-nav {
+  background-color: var(--white);
+  border-top: 4px solid var(--sand);
+  padding: 0.3rem 0;
+}
+
+/* HERO SECTION*/
+.hero {
+  position: relative;
+  width: 100%;
+  /* BACKGROUND IMAGE */
+  background-image: url("media-potts-website/3_dogs_at_potts.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Paralax effect */
+  background-attachment: fixed;
+
+  min-height: 70vh;
+  padding-top: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0)
+  );
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.45),
+    0 4px 8px rgba(0,0,0,0.35);
+}
+
+.hero-text h1 {
+  color: var(--sand);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55);
+}
+
+.hero-text p {
+  color: var(--sand);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
 }
 
 /* INNER HEADER: LOGO LEFT, TITLE CENTERED */
@@ -75,12 +140,7 @@ header {
   font-weight: bold;
 }
 
-/* NAVIGATION BAR (sand) */
-.main-nav {
-  background-color: var(--white);
-  border-top: 4px solid var(--sand);
-  padding: 0.5rem 0;
-}
+/* NAV LINKS */
 .main-nav ul {
   display: flex;
   justify-content: left;
@@ -88,16 +148,6 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 1; /* no need to float above nav */
-  background-color: var(--white);
-  padding: 1.5rem;
-  border-bottom: 4px solid var(--sage);
-  width: 100%;
-  margin-top: 0; /* remove extra space above hero text */
 }
 
 /* NAV LINKS */
@@ -115,21 +165,6 @@ header {
   color: var(--dark);
 }
 
-/* ================================
-   HERO SECTION
-   ================================ */
-.hero {
-  position: relative;
-  height: 350px;
-  background-image: url("media-potts-website/3_dogs_at_potts.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  display: flex;
-  align-items: flex-end; /* moves text to bottom of hero */
-}
 
 /* ================================
    PAGE HEADERS
@@ -146,7 +181,7 @@ header {
    CONTENT SECTIONS
    ================================ */
 section {
-  padding: 2rem;
+  padding: 0;
 }
 
 .about-section,
