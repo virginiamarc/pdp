@@ -31,56 +31,47 @@
         </nav>
     </header>
 
-  <section class="hero">
-    <div class="hero-slides">
-      <div class="slide" style="background-image: url('media-potts-website/3_dogs_at_potts.png');"></div>
-      <div class="slide" style="background-image: url('media-potts-website/owner_1dog.png');"></div>
-      <div class="slide" style="background-image: url('media-potts-website/owner_2dogs.png');"></div>
-      <div class="slide" style="background-image: url('media-potts-website/german_shepard.png')"></div>
+    <section class="hero">
+  <div class="hero-slides">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active" style="background-image: url('media-potts-website/3_dogs_at_potts.png');">
+      <div class="slide-content">
+        <h1>Where Dogs Run Free and Humans Reconnect With Nature</h1>
+        <a href="about.html" class="btn">Learn More</a>
+      </div>
     </div>
-    
-    <div class="hero-text">
-      <h1>Where Dogs Run Free and Humans Reconnect With Nature</h1>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" style="background-image: url('media-potts-website/owner_1dog.png');">
+      <div class="slide-content">
+        <h1>Volunteer With Us</h1>
+        <p>Join our volunteer team for park clean-ups and special events.</p>
+        <a href="getinvolved.html" class="btn">Get Involved</a>
+      </div>
     </div>
-  </section>
 
-  <section id="about">
-    <h3>What We Do</h3>
-    <p>We maintain a clean, safe, and fun environment for dogs and their owners. Learn about our mission and Dr. Potts’ legacy.</p>
-    <a href="about.html" class="btn">Learn More</a>
-  </section>
+    <!-- SLIDE 3 -->
+    <div class="slide" style="background-image: url('media-potts-website/owner_2dogs.png');">
+      <div class="slide-content">
+        <h1>Support the Sanctuary</h1>
+        <p>Your donations help us thrive. Suggested gift: $1 per dog per visit.</p>
+        <a href="donate.html" class="btn">Donate Now</a>
+      </div>
+    </div>
 
-  <section id="volunteer">
-    <h3>Get Involved</h3>
-    <p>Join our volunteer team for park clean-ups and special events.</p>
-    <button onclick="openForm()">Sign Up</button>
-  </section>
+  </div>
 
-  <section id="donate">
-    <h3>Support the Sanctuary</h3>
-    <p>Your donations help us thrive. Suggested gift: $1 per dog per visit.</p>
-    <a href="donate.html" class="btn">Make a Donation</a>
-  </section>
-  
-<script>
-  let current = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  function showNextSlide() {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }
-
-  slides[0].classList.add('active'); // show first slide
-  setInterval(showNextSlide, 5000);  // change every 5 seconds
-</script>
+  <!-- SLIDE CONTROLS -->
+  <button class="arrow arrow-left">&#10094;</button>
+  <button class="arrow arrow-right">&#10095;</button>
+</section>
 
   <footer>
     <p>© 2026 Potts Dog Sanctuary | Ruskin, FL</p>
     <p>Email: <a href="mailto:pottsdogsanctuary@gmail.com">pottsdogsanctuary@gmail.com</a> | Phone: <a href="tel:8133647275">813.DOG.PARK</a></p>
   </footer>
-
+  
   <script src="pdp.js"></script>
 </body>
 </html>
