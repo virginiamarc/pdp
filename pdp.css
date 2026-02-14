@@ -361,6 +361,13 @@ button:hover {
   display: block;
 }
 
+@media (max-width: 600px) {
+  .volunteer-video-container video {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
 /* ================================
    SOCIAL LINKS
    ================================ */
