@@ -440,7 +440,8 @@ section {
 
 .about-section h3,
 .contact-section h3 {
-  margin-top: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .donation-flex {
@@ -500,11 +501,22 @@ section {
   color: var(--dark);
 }
 
+.contact-image {
+  flex: 1 1 45%; /* image takes less space than the form */
+  position: relative;
+}
+
+.contact-form-wrapper {
+  flex: 1 1 55%; /* form gets more space than the image */
+}
+
 .contact-form input,
 .contact-form textarea {
-  padding: 0.7rem;
-  border: 2px solid var(--sage);
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
+  border: 1px solid var(--dark);
   font-size: 1rem;
   font-family: inherit;
   background-color: #fff;
@@ -512,7 +524,7 @@ section {
 
 .contact-form select {
   padding: 0.7rem;
-  border: 2px solid var(--sage);
+  border: 1px solid var(--dark);
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;
@@ -533,6 +545,26 @@ section {
   padding: 0.7rem 1.4rem;
 }
 
+.contact-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+}
 
 /* ================================
    BUTTONS
