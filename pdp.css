@@ -75,7 +75,7 @@ a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.6); /* adjustable darkness */
 }
 
 .hero-text {
@@ -148,13 +148,27 @@ header .site-title {
   overflow: hidden;
 }
 
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  /* Adjustable darkness */
+  background: rgba(0, 0, 0, 0.6);
+
+  pointer-events: none;
+}
+
 /* Image stays fully visible */
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* fill carousel without distortion */
-  object-position: center; /* anchor */
+  object-fit: cover;
+  object-position: center;
   display: block;
+  position: relative;
+  z-index: 0;
 }
 
 /* Background-image slides: use when you want per-slide focal control
@@ -197,27 +211,14 @@ header .site-title {
   background-color: var(--white); /* fills gaps created by contain */
 }
 .carousel-item.bg-slide {
-  aspect-ratio: 16/9; /* maintain aspect ratio to avoid distortion */
+  position: relative;
   overflow: hidden;   /* hide any overflow from background */
-}
-
-/* Gradient overlay */
-.carousel-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0)
-  );
-  z-index: 2;
 }
 
 /* Base caption styles */
 .carousel-caption {
-  z-index: 3;        /* stacked above overlay */
+  position: absolute;
+  z-index: 2;        /* stacked above overlay */
   bottom: 60px;      /* shared default position */
 }
 
