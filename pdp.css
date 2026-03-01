@@ -7,7 +7,8 @@
    COLOR PALETTE
    ================================ */
 :root {
-  --sage: #97BC62;
+  --sage: #6B8F71;
+  --sage-dark: #5F7F63;
   --sand: #E1C699;
   --bluegray: #AFCBFF;
   --dark: #2F4444;
@@ -57,10 +58,10 @@ a:hover {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* reduced height to minimize cropping */
+  height: 120vh; /* reduced height to minimize cropping */
   min-height: 400px; /* lower min-height for better mobile fit */
   background-size: cover; /* fill the hero area without distortion */
-  background-position: top center; /* anchor to top to show important content */
+  background-position: center 22%; /* anchor to top to show important content */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -68,7 +69,7 @@ a:hover {
 }
 
 .volunteer-hero {
-  background-image: url(media-potts-website/yamabsm-doberman_1280.jpg);
+  background-image: url(media-potts-website/running_1280.jpg);
 }
 
 .hero-overlay {
@@ -535,7 +536,7 @@ section {
 .btn,
 button {
   display: inline-block;
-  background-color: var(--sage);
+  background-color: var(--sage-dark);
   color: var(--white);
   padding: 0.6rem 1.2rem;
   border: none;
@@ -543,7 +544,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s ease;
-  text-shadow:0 1px 3px rgba(0,0,0,0.55);
+  text-shadow:0 1px 3px rgba(0,0,0,0.45);
 }
 
 .btn:hover,
@@ -602,13 +603,6 @@ button:hover {
 }
 .contact-section {
   border-top: 4px solid var(--sage);
-}
-
-@media (max-width: 600px) {
-  .volunteer-video-container video {
-    height: 200px;
-    object-fit: cover;
-  }
 }
 
 /* ================================
@@ -837,7 +831,7 @@ footer a:hover {
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--dark);
+    color: var(--bluegray);
     cursor: pointer;
     justify-self: end;
     margin-right: 1rem;
@@ -877,7 +871,7 @@ footer a:hover {
 }
 
 .btn-nav {
-  background-color: var(--sage);
+  background-color: #6B8F71;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -888,7 +882,7 @@ footer a:hover {
 }
 
 .btn-nav:hover {
-  background-color: var(--dark);
+  background-color: var(--sage-dark);
 }
 
 .btn-nav:disabled {
@@ -917,7 +911,7 @@ footer a:hover {
   font-weight: bold;
   text-align: center;
   padding: 0.5rem;
-  background-color: var(--sage);
+  background-color: #6B8F71;
   color: white;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -956,7 +950,7 @@ footer a:hover {
 }
 
 .calendar-day.event-day a:hover {
-  color: var(--sage);
+  color: #6B8F71;
   text-decoration: underline;
 }
 
