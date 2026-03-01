@@ -739,6 +739,76 @@ footer a:hover {
   opacity: 0.85;
 }
 
+/* Smaller hero for interior pages */
+.small-hero {
+  height: 35vh;
+  min-height: 260px;
+  background-image: url('media-potts-website/potts_park.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.small-hero h1 {
+  position: relative;
+  color: white;
+  font-size: 2.6rem;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Outer spacing around the container */
+.content-outer {
+  padding: 3rem 1rem;
+  background-color: var(--sand); /* soft neutral backdrop */
+}
+
+/* White content container */
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* Headings inside the container */
+.content-container h2 {
+  margin-top: 2rem;
+  color: #2f4444; /* dark sage */
+}
+
+/* Paragraphs */
+.content-container p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+/* Universal accent bar */
+.accent-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--sage-dark);
+  margin: 2.5rem 0;
+  border-radius: 4px;
+}
+
 /* ============================================
    MOBILE OPTIMIZATION — Potts Dog Sanctuary
    ============================================ */
@@ -878,6 +948,17 @@ footer a:hover {
 @media (min-width: 801px) {
   .hamburger {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .small-hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .content-wrapper {
+    padding: 2rem 1.2rem;
   }
 }
 
