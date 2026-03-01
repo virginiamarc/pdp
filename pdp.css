@@ -148,15 +148,12 @@ header .site-title {
   overflow: hidden;
 }
 
-.carousel-item::before {
+.carousel-item.bg-slide::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-
-  /* Adjustable darkness */
-  background: rgba(0, 0, 0, 0.75);
-
+  background: rgba(0, 0, 0, 0.6);
   pointer-events: none;
 }
 
@@ -205,7 +202,7 @@ header .site-title {
   background-repeat: no-repeat;
 }
 .carousel-item.bg-slide.slide-3 {
-  background-position: center 20%; /* position at top when using contain */
+  background-position: 20% 30%; /* position at top when using contain */
   background-size: cover;       /* show the whole image without cropping */
   background-repeat: no-repeat;
   background-color: var(--white); /* fills gaps created by contain */
@@ -227,15 +224,35 @@ header .site-title {
   text-align: center;
 }
 
-/* Caption text styling */
-.carousel-caption h2 {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.2rem 0.5rem;
-  display: inline-block;
-  font-size: 2.5rem;
+.caption-text h2,
+.caption-text p {
   color: var(--white);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8),
-  0 0 2px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  margin: 0.2rem 0;             
+}
+
+.carousel-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.carousel-caption a.btn {
+  display: inline-block;
+  margin: 0.75rem;
+}
+
+.carousel-caption .caption-text {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+}
+
+.carousel-caption .caption-text h2,
+.carousel-caption .caption-text p {
+  text-align: center;
 }
 
 /* Smaller screens: reduce carousel height to avoid heavy cropping */
