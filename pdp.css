@@ -151,7 +151,7 @@ header {
 */
 .carousel-item.bg-slide {
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   /* ensure caption and overlay still position correctly */
   display: block;
@@ -168,16 +168,18 @@ header {
    content into view. Increase the second value to move the image down, or
    use `top`/`center` keywords for quick presets. */
 .carousel-item.bg-slide.slide-1 {
-  background-position: center 18%; /* shift image down to reveal top subjects */
+  background-position: center 14%; /* shift image down to reveal top subjects */
+  background-size: cover;       /* fill without letterbox */
+  background-repeat: no-repeat;
 }
 .carousel-item.bg-slide.slide-2 {
-  background-position: center 20%; /* adjust focal point */
+  background-position: center 60%; /* adjust focal point */
   background-size: cover;       /* fill without letterbox */
   background-repeat: no-repeat;
 }
 .carousel-item.bg-slide.slide-3 {
-  background-position: center top; /* position at top when using contain */
-  background-size: contain;       /* show the whole image without cropping */
+  background-position: center 20%; /* position at top when using contain */
+  background-size: cover;       /* show the whole image without cropping */
   background-repeat: no-repeat;
   background-color: var(--white); /* fills gaps created by contain */
 }
