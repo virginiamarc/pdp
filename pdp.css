@@ -1002,22 +1002,24 @@ footer a:hover {
 }
 
 .btn-nav {
-  background-color: #6B8F71;
-  color: white;
+  background-color: #4F6B50;
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 .btn-nav:hover {
-  background-color: var(--sage-dark);
+  background-color: #3E553E; /* darker on hover */
 }
 
 .btn-nav:disabled {
-  background-color: #ccc;
+  background-color: #999; /* better contrast for disabled state */
+  color: #555;
   cursor: not-allowed;
 }
 
@@ -1032,18 +1034,18 @@ footer a:hover {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb; /* more visible border */
 }
 
 .calendar-header {
   font-weight: bold;
   text-align: center;
   padding: 0.5rem;
-  background-color: #6B8F71;
-  color: white;
+  background-color: #557A5B;
+  color: #fff;
   border-radius: 4px;
   font-size: 0.9rem;
 }
@@ -1059,17 +1061,17 @@ footer a:hover {
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
-  color: #666;
+  color: #333; /* default text color for days without events stronger contrast */
 }
 
 .calendar-day.event-day {
-  background-color: #fff3cd;
-  border-color: #ffc107;
+  background-color: #ffed99;
+  border-color: #ffbf00;
   font-weight: bold;
 }
 
 .calendar-day.event-day a {
-  color: var(--dark);
+  color: #333;
   font-weight: bold;
   text-decoration: none;
   display: block;
@@ -1081,8 +1083,39 @@ footer a:hover {
 }
 
 .calendar-day.event-day a:hover {
-  color: #6B8F71;
+  color: #1f4d2f;
   text-decoration: underline;
+}
+
+/* =======================
+   Checkbox Labels
+   ======================= */
+.checkbox-label {
+  display: flex;          /* horizontal layout */
+  align-items: center;    /* vertically center text with checkbox */
+  gap: 0.5rem;            /* space between checkbox and text */
+  line-height: 1.4;
+  font-size: 1rem;
+  color: var(--dark);
+  cursor: pointer;        /* makes the label clickable */
+}
+
+/* Only underline the links permanently */
+.important-link {
+    text-decoration: underline;  /* always underlined */
+    font-weight: bold;           /* optional: makes it stand out */
+    color: var(--dark);          /* ensures strong contrast */
+}
+
+.important-link:hover {
+    color: #1f4d2f;              /* subtle hover color change */
+    text-decoration: underline;  /* stays underlined */
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;          /* slightly larger checkbox for visibility */
+  height: 1.2rem;
+  cursor: pointer;        /* pointer when hovering */
 }
 
 /* Mobile: reduce calendar size */
