@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let current = 0;
   const slides = document.querySelectorAll('.slide');
 
+  if (slides.length > 0) { //only run if slides exist
+  
   function showSlide(index) {
-    slides[current].classList.remove('active');
+    if (slides[current]) slides[current].classList.remove('active');
     current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
+    if (slides[current]) slides[current].classList.add('active');
   }
 
   function showNextSlide() {
@@ -26,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (rightArrow) rightArrow.addEventListener('click', showNextSlide);
   if (leftArrow) leftArrow.addEventListener('click', showPrevSlide);
 
-  if (slides.length > 0) slides[0].classList.add('active');
+  slides[0].classList.add('active');
+}
 
   // HAMBURGER MENU SCRIPT
   const hamburger = document.querySelector('.hamburger');
