@@ -125,6 +125,10 @@ header {
   border-bottom: none;
 }
 
+header .site-title {
+  color: var(--white);
+}
+
 /* NAVIGATION BAR (sand) */
 .main-nav {
   background-color: var(--white);
