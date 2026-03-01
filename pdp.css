@@ -8,7 +8,7 @@
    ================================ */
 :root {
   --sage: #6B8F71;
-  --sage-dark: #5F7F63;
+  --sage-dark: #4E6E54;
   --sand: #E1C699;
   --bluegray: #AFCBFF;
   --dark: #2F4444;
@@ -587,6 +587,12 @@ button {
 .btn:hover,
 button:hover {
   background-color: var(--dark);
+}
+
+.btn:focus,
+button:focus {
+  outline: 3px solid var(--bluegray);
+  outline-offset: 3px;
 }
 
 
