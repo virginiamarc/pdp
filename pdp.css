@@ -183,6 +183,10 @@ header {
   background-repeat: no-repeat;
   background-color: var(--white); /* fills gaps created by contain */
 }
+.carousel-item.bg-slide {
+  aspect-ratio: 16/9; /* maintain aspect ratio to avoid distortion */
+  overflow: hidden;   /* hide any overflow from background */
+}
 
 /* Gradient overlay */
 .carousel-item::before {
@@ -221,6 +225,35 @@ header {
   .carousel-item {
     height: 50vh;
     min-height: 300px;
+  }
+}
+
+/* Tablets and smaller: adjust background position to keep important content visible */
+@media (max-width: 992px) {
+  .carousel-item.bg-slide.slide-1 {
+    background-position: center 20%;
+  }
+  .carousel-item.bg-slide.slide-2 {
+    background-position: center 70%;
+  }
+  .carousel-item.bg-slide.slide-3 {
+    background-position: center 30%;
+  }
+}
+
+/* Mobile: further adjust background position for very small screens */
+@media (max-width: 600px) {
+  .carousel-item.bg-slide {
+    aspect-ratio: 4/5; /* taller aspect ratio to show more vertical content */
+  }
+  .carousel-item.bg-slide.slide-1 {
+    background-position: center 30%;
+  }
+  .carousel-item.bg-slide.slide-2 {
+    background-position: center 80%;
+  }
+  .carousel-item.bg-slide.slide-3 {
+    background-position: center 40%;
   }
 }
 
