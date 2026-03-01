@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Pott's Dog Sanctuary</title>
+  <title>Pott's Dog Sanctuary</title>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="favicon-192.png"> <!-- For iOS devices -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="pdp.css" />
 </head>
-
 <body>
     <header>
         <div class="top-divider"></div>
@@ -19,7 +19,7 @@
                 <img src="media-potts-website/pdp_logo.png" alt="Potts Dog Sanctuary Logo" class="site-logo" />
               </a>
             </div>
-            
+
             <h1 class="site-title">Pott's Dog Sanctuary</h1>
             
             <button class="hamburger" aria-label="Open Menu">☰</button>
@@ -27,55 +27,32 @@
         
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="regulations.html">Regulations</a></li>
                 <li><a href="getinvolved.html">Get Involved</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-header">
-      <h2>Contact Us</h2>
-      <p class="subtitle">We’d love to hear from you. Reach out with questions, feedback, or ways to support the sanctuary.</p>
-    </section>
-  
-<section class="contact-section">
+<section class="about-section">
+  <h3>Support Our Mission - Make a Donation</h3>
+  <p>Your contribution helps maintain the sanctuary and support the dogs and families who rely on this space. Your donation helps us provide care and shelter for dogs in need. Every contribution makes a difference in the lives of rescued animals.</p>
 
-  <div class="contact-info">
-    <h3>Mailing Address</h3>
-    <p>
-      <em>Pott's Off Leash Dog Sanctuary</em><br>
-      P.O. Box 691<br>
-      Ruskin, FL 33575-0691<br>
-    </p>
-  </div>
-
-  <div class="contact-form-wrapper">
-    <h3>Send Us a Message</h3>
-
-    <form class="contact-form" action="#" method="post">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
+ <script type="module" src="https://donorbox.org/widgets.js" async></script>
+ 
+ <div class="donation-wrapper">
+    <dbox-widget
+        campaign="pott-s-dog-sanctuary-support-our-mission" 
+        type="donation_form" 
+        enable-auto-scroll="true">
+    </dbox-widget>
+ </div>
 </section>
 
-
-  <footer>
+<footer>
   <div class="footer-inner">
 
     <div class="footer-column">

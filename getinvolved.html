@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Involved | Potts Dog Sanctuary</title>
+  <title>Get Involved | Pott's Dog Sanctuary</title>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="favicon-192.png"> <!-- For iOS devices -->
   <link rel="stylesheet" href="pdp.css" />
@@ -19,7 +19,7 @@
               </a>
             </div>
             
-            <h1 class="site-title">Potts Dog Sanctuary</h1>
+            <h1 class="site-title">Pott's Dog Sanctuary</h1>
             
             <button class="hamburger" aria-label="Open Menu">☰</button>
         </div>
@@ -30,60 +30,65 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="regulations.html">Regulations</a></li>
                 <li><a href="getinvolved.html" class="active">Get Involved</a></li>
+                <li><a href="donate.html">Donate</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-  <section class="page-header">
-    <h2>Get Involved</h2>
-    <p>Join our mission to keep the sanctuary safe, beautiful, and thriving for dogs and their humans.</p>
-    <p>
-      At Potts Dog Sanctuary, we're passionate about creating a safe and beautiful environment for our canine 
-      companions and their human friends. There are several ways you can contribute to our mission and be part 
-      of our vibrant community.
-    </p>
-  </section>
-
-  <section class="about-section">
-    <h3>Volunteer</h3>
-    <p>
-      Join us for upcoming maintenance days and community events.
-      Whether you’re helping with park clean‑ups or lending a hand on 
-      special projects, every contribution makes Potts Dog Sanctuary a 
-      better place for dogs and their humans.
-    </p>
-
-    <!-- Volunteer Video -->
-    <div class="volunteer-video-container">
-      <video controls width="100%" poster="media-potts-website/girl_and_dog.jpg">
-        <source src="media-potts-website/video_3dogs_tub.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+  <section class="hero-section volunteer-hero" aria-label="Volunteer at Pott's Dog Sanctuary">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h2>Join Our Volunteer Team</h2>
+      <p>View our calendar of events and sign up to help maintain the sanctuary.</p>
     </div>
+  </section>
+  
+  <section class="about-section">
+    <h3>Upcoming Volunteer Events</h3>
     
-    <a href="volunteer.html" class="btn">Sign Up to Volunteer</a>
-  </section>
-
-  <section class="about-section">
-    <h3>Make a Donation</h3>
     <p>
-      Support us financially. Your tax-free donations help us improve the park's facilities and much more. 
-      Please consider a gift of $1.00 per dog for each visit. For example, for one dog visiting two days per 
-      week, a gift of $100 per year would be appropriate.
+      We rely on the support of our volunteers to keep the sanctuary running smoothly. From park clean-ups to community events, there are many ways to get involved and make a difference.
+      </p>
+
+    <p class="section-intro">
+      Browse the calendar below to see upcoming volunteer opportunities. Whether you have a few hours or a whole day to spare, your help is invaluable in maintaining the sanctuary and supporting our mission.
     </p>
-    <a href="donate.html" class="btn">Make a Donation</a>
+    <p>Click on any event date below to sign up or learn more.</p>
+
+    <hr class="section-divider">
+    
+    <div id="calendar-container" class="events-calendar"></div>
+    
+    <p style="margin-top: 1.5rem; font-size: 0.9rem;"><strong>Legend:</strong> Highlighted dates show available volunteer opportunities.</p>
+    <a href="#events-list" class="btn">View All Opportunities</a>
   </section>
 
-  <section class="about-section">
-    <h3>Be Part of Our Team</h3>
+  <!-- All events list (built from events By Month)-->
+  <section id="events-list" class="about-section" aria-labelledby="events-list-heading">
+    <h3 id="events-list-heading">All Volunteer Opportunities</h3>
+    <ul class="events-list" aria-live="polite" aria-busy="true">
+      <li><strong>March 5, 2026:</strong> Park Clean-Up Day - Help us tidy up the sanctuary and prepare for spring. (9:00 AM)</li>
+      <li><strong>March 12, 2026:</strong> Facility Maintenance - Assist with repairs and upkeep to keep the park safe and welcoming. (10:00 AM)</li>
+      <li><strong>March 17, 2026:</strong> Community Day Event - Join us for a day of fun activities and help engage with visitors. (10:00 AM)</li>
+      <li><strong>March 24, 2026:</strong> Grant Writing Workshop - Support our fundraising efforts by helping write grant proposals. (2:00 PM)</li>
+      <li><strong>March 29, 2026:</strong> Spring Festival Prep - Get ready for our annual festival by helping with setup and decorations. (8:00 AM)</li>
+      <li><strong>April 7, 2026:</strong> Spring Cleanup - Join us for a thorough cleaning of the park to welcome the new season. (9:00 AM)</li>
+      <li><strong>April 21, 2026:</strong> Summer Planning Meeting - Help us plan events and activities for the upcoming summer season. (6:00 PM)</li>
+      <li><strong>May 5, 2026:</strong> Memorial Day Cleanup - Prepare the park for Memorial Day weekend with a community cleanup. (9:00 AM)</li>
+      <li><strong>May 19, 2026:</strong> Dog Day Fundraiser - Assist with organizing and running our special fundraiser event. (11:00 AM)</li>
+    </ul>
+  </section>
+
+  <section class ="about-section commitment">
+    <h3>Our Commitment</h3>
     <p>
-      We're looking for enthusiastic individuals to fill key volunteer roles. Right now, we especially need 
-      someone with experience in grant writing.
+      The sanctuary is not for sale and is currently being legally restructured to remain a permanent fixture 
+      in the community. With the help of dedicated volunteers, we work continuously to maintain and improve 
+      the facilities for the well-being of both dogs and their humans.
     </p>
-    <a href="volunteer.html" class="btn">Join the Team</a>
-  </section>
 
+  </section>
   <section class="about-section">
     <h3>Spread the Word</h3>
     <p>
@@ -102,8 +107,26 @@
     </p>
   </section>
 
+  <section class="about-section">
+    <h3>Join Us</h3>
+    <p>Your time, energy, and voice help keep the sanctuary thriving. We’d love to have you as part of our community.</p>
+    <a href="#events-list" class="btn">See Volunteer Events</a>
+  </section>
+
 <footer>
   <div class="footer-inner">
+
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="regulations.html">Regulations</a></li>
+        <li><a href="getinvolved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
     <div class="footer-column">
       <h4>Location</h4>
@@ -156,5 +179,172 @@
 </footer>
 
 <script src="pdp.js"></script>
+<script>
+// Event dates (month -> day -> event details)
+const eventsByMonth = {
+  2: { // March
+    5:  { title: 'Park Clean-Up Day',       id: 'park-cleanup-march5',   time: '9:00 AM'  },
+    12: { title: 'Facility Maintenance',    id: 'maintenance-march12',   time: '10:00 AM' },
+    17: { title: 'Community Day Event',     id: 'community-day-march17', time: '10:00 AM' },
+    24: { title: 'Grant Writing Workshop',  id: 'grants-meeting-march24',time: '2:00 PM'  },
+    29: { title: 'Spring Festival Prep',    id: 'spring-festival-march29', time: '8:00 AM' }
+  },
+  3: { // April
+    7:  { title: 'Spring Cleanup',          id: 'spring-cleanup-apr7',   time: '9:00 AM'  },
+    21: { title: 'Summer Planning Meeting', id: 'summer-planning-apr21', time: '6:00 PM'  }
+  },
+  4: { // May
+    5:  { title: 'Memorial Day Cleanup',    id: 'memorial-day-may5',     time: '9:00 AM'  },
+    19: { title: 'Dog Day Fundraiser',      id: 'dogday-may19',          time: '11:00 AM' }
+  }
+};
+
+let currentDisplayMonth = 2; // Start with March 2026
+const currentYear = 2026;
+
+function generateCalendar(year, month) {
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July', 'August', 'September', 'October', 'November', 'December'];
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  const firstDay    = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const monthEvents = eventsByMonth[month] || {};
+
+  let html = `
+    <div class="calendar-month">
+      <h4>${monthNames[month]} ${year}</h4>
+      <div class="calendar-grid">
+  `;
+
+  // Day headers
+  dayNames.forEach(day => {
+    html += `<div class="calendar-header">${day}</div>`;
+  });
+
+  // Empty cells before first day
+  for (let i = 0; i < firstDay; i++) {
+    html += `<div></div>`;
+  }
+
+  // Calendar days
+  for (let day = 1; day <= daysInMonth; day++) {
+    if (monthEvents[day]) {
+      const event = monthEvents[day];
+      html += `
+        <div class="calendar-day event-day">
+          <a href="signup.html?event=${encodeURIComponent(event.id)}">${day}</a>
+        </div>
+      `;
+    } else {
+      html += `<div class="calendar-day">${day}</div>`;
+    }
+  }
+
+  html += `
+      </div>
+    </div>
+  `;
+
+  return html;
+}
+
+function renderCurrentMonth() {
+  const container = document.getElementById('calendar-container');
+  if (!container) return;
+
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July', 'August', 'September', 'October', 'November', 'December'];
+
+  const navHtml = `
+    <div class="calendar-nav">
+      <button id="prevBtn" class="btn-nav">← Previous</button>
+      <span id="monthDisplay">${monthNames[currentDisplayMonth]} ${currentYear}</span>
+      <button id="nextBtn" class="btn-nav">Next →</button>
+    </div>
+  `;
+
+  container.innerHTML = navHtml + generateCalendar(currentYear, currentDisplayMonth);
+
+  // Attach event listeners
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  prevBtn.disabled = currentDisplayMonth <= 0;
+  nextBtn.disabled = currentDisplayMonth >= 11;
+
+  prevBtn.addEventListener('click', function () {
+    if (currentDisplayMonth > 0) {
+      currentDisplayMonth--;
+      renderCurrentMonth();
+    }
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (currentDisplayMonth < 11) {
+      currentDisplayMonth++;
+      renderCurrentMonth();
+    }
+  });
+}
+
+// ---- Build a chronological list from eventsByMonth ----
+function buildEventsList(year) {
+  const listEl = document.querySelector('#events-list .events-list');
+  if (!listEl) return;
+
+  // Flatten events into an array with real Date objects
+  const months = Object.keys(eventsByMonth).map(n => parseInt(n, 10)).sort((a, b) => a - b);
+
+  const items = [];
+  months.forEach(monthIdx => {
+    const daysObj = eventsByMonth[monthIdx] || {};
+    Object.keys(daysObj).map(n => parseInt(n, 10)).sort((a, b) => a - b).forEach(day => {
+      const ev = daysObj[day];
+      const date = new Date(year, monthIdx, day);
+      items.push({ date, ...ev });
+    });
+  });
+
+  // Sort by actual date, just in case
+  items.sort((a, b) => a.date - b.date);
+
+  // Format and render
+  const formatter = new Intl.DateTimeFormat(undefined, {
+    weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'
+  });
+
+  listEl.innerHTML = items.length
+    ? items.map(ev => {
+        const dateStr = formatter.format(ev.date);
+        const timeStr = ev.time ? ` • ${ev.time}` : '';
+        return `
+          <li class="event-item">
+            <a href="signup.html?event=${encodeURIComponent(ev.id)}">
+              <span class="event-title">${ev.title}</span>
+              <span class="event-meta">${dateStr}${timeStr}</span>
+            </a>
+          </li>
+          `;
+      }).join('')
+    : `<li>No upcoming events found.</li>`;
+
+  listEl.setAttribute('aria-busy', 'false');
+}
+
+// Generate and insert calendar + list on page load
+document.addEventListener('DOMContentLoaded', function () {
+  renderCurrentMonth();
+  buildEventsList(currentYear);
+
+  // Smooth scroll for any button that links to #events-list
+  document.querySelectorAll('a[href="#events-list"]').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('events-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
+</script>
 </body>
 </html>
