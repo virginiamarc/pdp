@@ -72,10 +72,37 @@ a:hover {
   background-image: url(media-potts-website/running_1280.jpg);
 }
 
+.hero-text-box h1,
+.hero-text-box h2,
+.hero-text-box p {
+  margin: 0.25rem;
+}
+
+.hero-text-box {
+  display: inline-block;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.85)
+  );
+  padding: 1.25rem 1.25rem;
+  line-height: 1;
+  border-radius: 0.35rem;
+  text-align: center;
+  backdrop-filter: blur(2px); /* optional: adds a polished glassy feel */
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6); /* adjustable darkness */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.0) 0%,
+    rgba(0,0,0,0.55) 60%,
+    rgba(0,0,0,0.85) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-text {
@@ -1150,36 +1177,92 @@ input[type="checkbox"] {
   }
 }
 
-/* Events list styles */
+/* ---------------------------- */
+/* Event List Container Styling */
+/* ---------------------------- */
 #events-list .events-list {
-  list-style: none;
+  list-style: none;          /* removes bullets */
   padding: 0;
   margin: 1rem 0 0;
+  max-width: 850px;
 }
 
-#events-list .event-item + .event-item {
-  margin-top: .75rem;
-  border-top: 1px solid rgba(0,0,0,.08);
-  padding-top: .75rem;
+/* Space between cards */
+#events-list .events-list li + li {
+  margin-top: 0.75rem;
 }
 
-#events-list .event-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  text-decoration: none;
+/* ---------------------------- */
+/* Event Card Styling */
+/* ---------------------------- */
+#events-list .events-list li {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-left: 5px solid #2c5e3f;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-#events-list .event-title {
+/* ---------------------------- */
+/* Event Title Styling */
+/* ---------------------------- */
+#events-list .events-list li .event-title,
+#events-list .events-list li h3,
+#events-list .events-list li strong.title {
+  font-weight: 700;         /* bold */
+  color: #1f4d34;
+  font-size: 1.1rem;        /* adjust as needed */
+  margin: 0 0 0.5rem 0;     /* spacing below title */
+  display: inline-block;
+}
+
+/* ---------------------------- */
+/* Event Date Styling */
+/* ---------------------------- */
+#events-list .events-list li .event-date,
+#events-list .events-list li strong.date {
   font-weight: 600;
-  color: var(--text, #222);
+  color: #1f4d34;
 }
 
-#events-list .event-meta {
-  color: #555;
-  font-size: 0.95rem;
+/* ---------------------------- */
+/* Event Time + Clock Icon Styling */
+/* ---------------------------- */
+#events-list .events-list li .event-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.75rem;
+  color: #2c5e3f;
+  font-weight: 500;
 }
 
-/* Ensure the anchor scroll doesn't hide under a sticky header (if you have one) */
-#events-list { scroll-margin-top: 100px; }
+/* Remove default list bullets (modern browsers) */
+#events-list .events-list li::marker {
+  content: none;
+}
+
+.event-time {
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Back button styling */
+.btn-back {
+  display: inline-block;      /* fits text only */
+  width: auto;                /* prevents stretching */
+  padding: 0.5rem 1.25rem;
+  margin-top: 1rem;
+  background-color: #555;     /* dark gray */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-back:hover {
+  background-color: #444;
+  color: #fff;
+}
