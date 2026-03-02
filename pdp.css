@@ -811,6 +811,8 @@ footer a:hover {
 .small-hero .hero-overlay {
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* solid-ish black */
+  /* optional: add a slight gradient for style */
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.7),
@@ -820,11 +822,16 @@ footer a:hover {
 
 .small-hero h1 {
   position: relative;
-  color: white;
+  color: #fff;
+  font-weight: 700;
   font-size: 2.6rem;
   text-align: center;
   z-index: 2;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.small-hero img {
+  filter: brightness(70%);
 }
 
 /* Outer spacing around the container */
