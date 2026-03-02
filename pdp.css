@@ -330,6 +330,14 @@ header .site-title {
   }
 }
 
+@media (max-width: 768px) {
+  /* Third slide image slightly smaller */
+  #aboutCarousel .carousel-inner .carousel-item:nth-child(3) img {
+    max-width: 70%;  /* adjust size */
+    margin: 0 auto;  /* center it */
+  }
+}
+
 /* INNER HEADER: LOGO LEFT, TITLE CENTERED */
 .header-inner {
   display: flex;
