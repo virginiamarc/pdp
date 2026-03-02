@@ -990,10 +990,10 @@ footer a:hover {
   /* Hamburger button on the right */
   .hamburger {
     display: block;
-    background: none;
+    background-color: rgb(107, 143, 113); /* your green */
+    color: #ffffff;                        /* high contrast white text */
     border: none;
     font-size: 2rem;
-    color: var(--bluegray);
     cursor: pointer;
     justify-self: end;
     margin-right: 1rem;
