@@ -750,6 +750,40 @@ button:focus {
   color: var(--dark);
 }
 
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.social-link {
+  color: var(--bluegray);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--dark);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
 /* ================================
    FOOTER
    ================================ */
