@@ -681,27 +681,30 @@ button:focus {
 /* Mission section video styling */
 .mission-video-container {
   max-width: 700px; /* was 700px*/
-  margin: 20px auto; /* centers the video */
-  border-radius: 8px;
-  overflow: hidden;
-  /* aspect-ratio: 16 / 9; maintain 16:9 aspect ratio */
-  /* background: #0000; fallback background */
+  margin: 0 auto; /* centers the video */
+  text-align: center;
 }
 
 .mission-video-container video {
   width: 100%;
  /*height: 100%;*/
-  max-height: 240px; /* limit height to prevent excessive cropping */
-  object-fit: contain;
+ border-radius: 8px;
+  max-height: 600px; /* limit height to prevent excessive cropping */
+  object-fit: cover; /* fill the container while maintaining aspect ratio */
   /*height: auto;*/
   display: block;
 }
 
 .video-caption {
-  text-align: center;
-  margin-top: 0.5rem;
-  font-style: italic;
+  font-size: 0.9rem;
   color: var(--dark);
+  opacity: 0.85;
+  margin-top: 0.6rem;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ================================
