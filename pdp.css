@@ -20,6 +20,7 @@
    GLOBAL STYLES
    ================================ */
 body {
+  padding-top: 115px;
   margin: 0;
   font-family: "Lato", sans-serif;
   background-color: var(--sand);
@@ -147,8 +148,12 @@ a:hover {
 
 /* HEADER BACKGROUND (green) */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   background-color: var(--sage);
-  padding: 0.1rem 0 0; /* tightened to reduce header height */
   border-bottom: none;
 }
 
@@ -599,7 +604,9 @@ section {
 }
 
 .contact-form button {
-  width: fit-content;
+  display: block;
+  margin: 1.5rem auto 0;
+  width: 200px;
   padding: 0.7rem 1.4rem;
 }
 
@@ -621,6 +628,22 @@ section {
 @media (max-width: 768px) {
   .contact-layout {
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -643,6 +666,8 @@ button {
 
 .btn:hover,
 button:hover {
+  text-decoration: underline;
+  color: var(--white);
   background-color: var(--dark);
 }
 
@@ -1267,8 +1292,8 @@ input[type="checkbox"] {
 .btn-back {
   display: inline-block;      /* fits text only */
   width: auto;                /* prevents stretching */
-  padding: 0.5rem 1.25rem;
-  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1rem auto 0;
   background-color: #555;     /* dark gray */
   color: #fff;
   border-radius: 5px;
